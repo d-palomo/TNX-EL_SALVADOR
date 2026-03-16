@@ -1,0 +1,497 @@
+/* ================================================
+   TNX El Salvador — style.css
+   Estructura inicial / Commit v1.0
+   ================================================ */
+
+
+/* ────────────────────────────────────────────────
+   RESET & BASE
+──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ────────────────────────────────────────────────
+   NAVBAR
+──────────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Links de navegación */
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #111;
+}
+
+/* Íconos de redes sociales */
+.navbar-social {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.navbar-social a:hover {
+  background: #f5f5f5;
+  color: #111;
+  border-color: #ccc;
+}
+
+/* Ocultar links en móvil muy pequeño */
+@media (max-width: 600px) {
+  .navbar-links {
+    display: none;
+  }
+}
+
+
+/* ────────────────────────────────────────────────
+   HERO
+──────────────────────────────────────────────── */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px 56px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: #666;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 11px 24px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+
+/* ────────────────────────────────────────────────
+   ETIQUETA DE SECCIÓN (label superior)
+──────────────────────────────────────────────── */
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+
+/* ────────────────────────────────────────────────
+   BENEFICIOS
+──────────────────────────────────────────────── */
+.benefits {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.benefit-card {
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.benefit-icon {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+.benefit-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.benefit-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* ────────────────────────────────────────────────
+   CATÁLOGO — SECCIONES
+──────────────────────────────────────────────── */
+#catalogo {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalog-section {
+  padding: 48px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.catalog-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.catalog-section-header .section-label {
+  margin-bottom: 0;
+}
+
+.catalog-see-all {
+  font-size: 13px;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.catalog-see-all:hover {
+  color: #111;
+}
+
+
+/* ────────────────────────────────────────────────
+   CARRUSEL HORIZONTAL
+──────────────────────────────────────────────── */
+.carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 4px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 2px;
+}
+
+
+/* ────────────────────────────────────────────────
+   TARJETA DE PRODUCTO
+──────────────────────────────────────────────── */
+.product-card {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  border-color: #bbb;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+/* Contenedor de imagen */
+.product-img {
+  aspect-ratio: 1 / 1;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.04);
+}
+
+/* Info */
+.product-info {
+  padding: 12px;
+  background: #fff;
+}
+
+.product-info h4 {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.badge-original {
+  background: #e6f4ea;
+  color: #1e6b35;
+}
+
+.badge-oem {
+  background: #e8f0fe;
+  color: #1a4fbf;
+}
+
+.badge-acc {
+  background: #fef3e2;
+  color: #a35c00;
+}
+
+
+/* ────────────────────────────────────────────────
+   CONTACTO
+──────────────────────────────────────────────── */
+.contact {
+  border-top: 1px solid #e5e5e5;
+  background: #f9f9f9;
+  padding: 56px 24px;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.contact-text h2 {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.contact-text p {
+  font-size: 15px;
+  color: #666;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.contact-btn:hover {
+  background: #f0f0f0;
+  border-color: #bbb;
+}
+
+/* Móvil: apilar contacto */
+@media (max-width: 600px) {
+  .contact-inner {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+/* ────────────────────────────────────────────────
+   FOOTER
+──────────────────────────────────────────────── */
+.footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 32px 24px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+  background: #f0f0f0;
+  color: #111;
+}
+
+.footer-slogan {
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #aaa;
+}
