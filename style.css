@@ -89,6 +89,150 @@ a {
   height: 18px;
 }
 
+/* ────────────────────────────────────────────────
+   BANNER DE CONDICIONES CLAVE
+──────────────────────────────────────────────── */
+.conditions-banner {
+  background: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.conditions-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.condition-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.condition-item strong {
+  color: #111;
+}
+
+.condition-icon {
+  font-size: 14px;
+}
+
+.condition-divider {
+  width: 1px;
+  height: 16px;
+  background: #ddd;
+}
+
+.condition-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  margin-left: auto;
+  transition: opacity 0.2s;
+}
+
+.condition-link:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+  .condition-divider { display: none; }
+  .condition-link { margin-left: 0; }
+}
+
+/* ────────────────────────────────────────────────
+   PRECIO DOBLE (unidad + mayoreo)
+──────────────────────────────────────────────── */
+.price-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin-top: 2px;
+}
+
+.price-label {
+  font-size: 10px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.price-mayoreo {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* ────────────────────────────────────────────────
+   BADGE AGOTADO
+──────────────────────────────────────────────── */
+.badge-sold-out {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ────────────────────────────────────────────────
+   SECCIÓN CONDICIONES
+──────────────────────────────────────────────── */
+.conditions {
+  border-top: 1px solid #e5e5e5;
+  padding: 56px 24px;
+}
+
+.conditions-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conditions-inner h2 {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.condition-card {
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.condition-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.condition-card p:last-child {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
 /* Íconos de redes sociales */
 .navbar-social {
   display: flex;
@@ -317,6 +461,7 @@ a {
   aspect-ratio: 1 / 1;
   background: #f5f5f5;
   overflow: hidden;
+  position: relative;
 }
 
 .product-img img {
