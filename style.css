@@ -82,6 +82,13 @@ a {
   color: #111;
 }
 
+/* SVG íconos */
+.social-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
 /* Íconos de redes sociales */
 .navbar-social {
   display: flex;
