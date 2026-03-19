@@ -200,6 +200,7 @@ a {
   height: 280px;
   flex-shrink: 0;
   margin-left: -150px;
+  margin-right: 40px;
 }
 
 .hero-card {
