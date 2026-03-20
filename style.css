@@ -565,7 +565,7 @@ a {
    SECCIÓN CONDICIONES
 ──────────────────────────────────────────────── */
 .conditions {
-  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   padding: 56px 24px;
 }
 
@@ -618,7 +618,6 @@ a {
    CONTACTO
 ──────────────────────────────────────────────── */
 .contact {
-  border-top: 1px solid #e5e5e5;
   background: #f9f9f9;
   padding: 56px 24px;
 }
